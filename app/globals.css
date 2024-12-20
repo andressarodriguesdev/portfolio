@@ -561,31 +561,43 @@ h3 {
 			}
 
 			.chat-message {
-				display:flex;
-				margin-top:15px;
-				gap:15px;
+				display: flex;
+				margin-top: 15px;
+				gap: 15px;
 				input {
-					border-radius:10px;
-					flex:1;
-					padding:15px;
-					border:1px solid transparent;
+					border-radius: 10px;
+					flex: 1;
+					padding: 15px;
+					border: 1px solid transparent;
 					background-color: var(--base-100);
 					&:hover {
-						outline:none;
-						background-color:white;
-						border:1px solid var(--base-100);
+						outline: none;
+						background-color: white;
+						border: 1px solid var(--base-100);
 					}
 					&:focus {
-						outline:none;
-						background-color:white;
-						border:1px solid var(--base-100);
+						outline: none;
+						background-color: white;
+						border: 1px solid var(--base-100);
 					}
 				}
 				button {
-					border:none;
-					cursor:pointer;
+					border: none;
+					cursor: pointer;
+				}
+			
+				/* Adicionar regra para telas pequenas */
+				@media (max-width: 768px) {
+					flex-direction: column; /* Alterar a direção para coluna */
+					gap: 10px; /* Ajustar o espaçamento */
+					
+					button {
+						width: 100%; /* Botão ocupa toda a largura */
+						font-size: 14px; /* Ajustar tamanho da fonte */
+					}
 				}
 			}
+			
 		}
 	}
 }
