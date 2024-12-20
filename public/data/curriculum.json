@@ -1,0 +1,59 @@
+{
+    "objetivo": "Estágio em desenvolvimento de software/ Estágio Backend",
+    "formacao_academica": {
+      "curso": "Sistemas da Informação",
+      "instituicao": "Centro Universitário das Américas (FAM)",
+      "conclusao": "Julho de 2028"
+    },
+    "hard_skills": {
+      "linguagens": ["Java", "JavaScript", "SQL"],
+      "frameworks": ["Spring Boot", "Thymeleaf", "Bootstrap"],
+      "bancos_de_dados": ["MySQL", "NoSQL", "H2"],
+      "ferramentas": ["JUnit", "Mockito", "Git/GitHub"],
+      "metodologias": ["Scrum", "práticas ágeis"],
+      "desenvolvimento": ["APIs RESTful", "integração com bancos de dados"]
+    },
+    "soft_skills": [
+      "Comunicação eficaz e trabalho em equipe",
+      "Gestão de tempo e organização",
+      "Resolução de problemas e adaptabilidade"
+    ],
+    "projetos_relevantes": [
+      {
+        "nome": "ChamaElas (Bootcamp ElasTech, 2024)",
+        "descricao": "Sistema de gestão de chamados usando Java, Spring Boot, MySQL e Thymeleaf. Melhorou a eficiência do gerenciamento de chamados com funcionalidades como atribuição de técnicos e interface amigável."
+      },
+      {
+        "nome": "Capivara System",
+        "descricao": "Sistema para catalogar capivaras, desenvolvido com Node.JS e Vue.JS. Gerenciamento de dados de capivaras, cadastramento, alteração de dados, exclusão e filtro por habitat."
+      }
+    ],
+    "contatos": {
+      "idade":"31 anos",
+      "email": "andressa.rodrigues.2172@gmail.com",
+      "celular": "(61) 98258-5796",
+      "localizacao": "Brasília - DF",
+      "linkedin": "https://www.linkedin.com/in/andressa-macedo-rodrigues",
+      "github": "https://github.com/andressarodrigues2172dev"
+    },
+    "cursos_complementares": [
+      {
+        "nome": "Bootcamp Potência Tech iFood (DIO, 2023)",
+        "descricao": "Fundamentos de programação e lógica."
+      },
+      {
+        "nome": "Bootcamp ElasTech (SoulCode Academy, 2024)",
+        "descricao": "Java, Spring Boot, MySQL e testes unitários."
+      },
+      {
+        "nome": "Java Backend (Ada Tech, 2024)",
+        "descricao": "Git, POO, design patterns e estrutura de dados."
+      }
+    ],
+    "idiomas": {
+      "portugues": "Nativo",
+      "ingles": "Intermediário"
+    },
+    "disponibilidade": "Início imediato"
+  }
+  

@@ -1,0 +1,26 @@
+{
+  "name": "portfolio-backend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@huggingface/inference": "^2.8.1",
+    "axios": "^1.7.9",
+    "dotenv": "^16.4.7",
+    "next": "15.1.1",
+    "pdf-parse": "^1.1.1",
+    "portfolio-backend": "file:",
+    "punycode": "^2.3.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1"
+  }
+}
