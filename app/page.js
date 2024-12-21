@@ -69,7 +69,8 @@ export default function Home() {
               <a href="#projetos">Projetos</a>
             </li>
             <li>
-              <a href="mailto: andressa.rodrigues.2172@gmail.com" className="button" target="blanck">Contato</a>
+              <a href="https://wa.me/5561912345678" className="button" target="blanck"  rel="noopener noreferrer">
+              Contato</a>
             </li>
           </ul>
 
@@ -98,9 +99,9 @@ export default function Home() {
                 <a href="/Andressa_Rodrigues.pdf" className="button black" target="blanck" >
                     Curriculo
                 </a>
-                <a href="mailto: andressa.rodrigues.2172@gmail.com" className="button white" target="blanck">
-                    Fale comigo
-                </a>
+                <a href="mailto:andressa.rodrigues.2172@gmail.com" className="button white" target="_blank">
+    Fale comigo
+</a>
               </div>
               <div className="social-links">
                 <a href="https://github.com/andressarodrigues2172dev" target="blanck">
