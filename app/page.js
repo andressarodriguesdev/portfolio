@@ -130,7 +130,7 @@ export default function Home() {
                 <img src="./imgs/vscode.png" width="128" alt="VS Code" />
                 <img src="./imgs/python.png" width="128" alt="Python" />
                 <img src="./imgs/postgresql.png" width="128" alt="Postgresql" />
-                <img src="./imgs/intellij.png" width="128" alt="Intellij" />
+                <img src="./imgs/spring-logo.png" width="128" alt="Intellij" />
                 {/* Repetição dos ícones */}
                 <img src="./imgs/html.png" alt="HTML" width="128" />
                 <img src="./imgs/css.png" alt="CSS" width="128" />
@@ -141,7 +141,7 @@ export default function Home() {
                 <img src="./imgs/vscode.png" width="128" alt="VS Code" />
                 <img src="./imgs/python.png" width="128" alt="Python" />
                 <img src="./imgs/postgresql.png" width="128" alt="Postgresql" />
-                <img src="./imgs/intellij" width="128" alt="Intellij" />
+                <img src="./imgs/spring-logo.png" width="128" alt="Intellij" />
             </div>
           </div>
         </section>
