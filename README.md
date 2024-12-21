@@ -1,5 +1,8 @@
 # **Portfólio Online com Chatbot Interativo**
 
+[Macbook-Air-localhost-0xixqam6midniv.webm](https://github.com/user-attachments/assets/dbbf553c-8387-44c5-a8c1-ad8e60d742fe)
+
+
 Bem-vindo ao repositório do meu portfólio online! Este projeto apresenta minhas habilidades como desenvolvedora, inclui links para meus principais projetos e conta com um chatbot interativo, chamado **Laura**, para responder perguntas sobre meu currículo e experiências profissionais.
 
 ---
