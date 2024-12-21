@@ -5,6 +5,11 @@
 
 Bem-vindo ao repositório do meu portfólio online! Este projeto apresenta minhas habilidades como desenvolvedora, inclui links para meus principais projetos e conta com um chatbot interativo, chamado **Laura**, para responder perguntas sobre meu currículo e experiências profissionais.
 
+
+![Portfolio - Telas](https://github.com/user-attachments/assets/838bc2fd-fbf8-4e0d-8788-5f8b7c4a06fe)
+
+Link : https://andressa-porftolio.vercel.app/
+
 ---
 
 ## **🎯 Funcionalidades**
