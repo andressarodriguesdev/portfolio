@@ -100,8 +100,8 @@ export default function Home() {
                     Curriculo
                 </a>
                 <a href="mailto:andressa.rodrigues.2172@gmail.com" className="button white" target="_blank">
-    Fale comigo
-</a>
+                    Fale comigo
+                </a>
               </div>
               <div className="social-links">
                 <a href="https://github.com/andressarodrigues2172dev" target="blanck">
@@ -141,7 +141,7 @@ export default function Home() {
                 <img src="./imgs/vscode.png" width="128" alt="VS Code" />
                 <img src="./imgs/python.png" width="128" alt="Python" />
                 <img src="./imgs/postgresql.png" width="128" alt="Postgresql" />
-                <img src="./imgs/Intellij.png" width="128" alt="Intellij" />
+                <img src="./imgs/Intellij" width="128" alt="Intellij" />
             </div>
           </div>
         </section>
