@@ -82,6 +82,32 @@ function handleGreetings(message) {
   return null;
 }
 
+// Função para tratar agradecimentos e despedidas
+function handleThanksAndGoodbyes(message) {
+  const thanks = ['obrigado', 'obrigada', 'valeu', 'agradeço'];
+  const goodbyes = ['tchau', 'até mais', 'até logo', 'adeus'];
+
+  const lowerCaseMessage = message.toLowerCase();
+
+  // Respostas para agradecimentos
+  if (thanks.some(thank => lowerCaseMessage.includes(thank))) {
+    return [
+      'De nada! Posso ajudar com mais alguma coisa?',
+      'Por nada! Se precisar de algo mais, é só falar.',
+    ][Math.floor(Math.random() * 2)];
+  }
+
+  // Respostas para despedidas
+  if (goodbyes.some(goodbye => lowerCaseMessage.includes(goodbye))) {
+    return [
+      'Tchau! Tenha um ótimo dia!',
+      'Até mais! Estou aqui sempre que precisar.',
+    ][Math.floor(Math.random() * 2)];
+  }
+
+  return null;
+}
+
 // Função para normalizar o texto
 function normalizeText(query) {
   const synonymMap = {
@@ -230,6 +256,7 @@ function searchCurriculum(query) {
 }
 
 
+
 // Handler principal para processar requisições
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -244,23 +271,28 @@ export default async function handler(req, res) {
 
   console.log('Mensagem recebida:', message);
 
+  // Recarrega os dados do currículo antes de processar a solicitação
   await loadCurriculumData();
 
+  // Verifica se é um agradecimento ou despedida
+  const thanksOrGoodbyeResponse = handleThanksAndGoodbyes(message);
+  if (thanksOrGoodbyeResponse) {
+    return res.status(200).json({ reply: thanksOrGoodbyeResponse });
+  }
+
+  // Verifica saudações
   const greetingResponse = handleGreetings(message);
   if (greetingResponse) {
     return res.status(200).json({ reply: greetingResponse });
   }
 
+  // Busca resposta programada no currículo
   const programmedResponse = searchCurriculum(message);
   if (programmedResponse) {
     return res.status(200).json({ reply: programmedResponse });
   }
 
-  try {
-    const aiResponse = await getWitAiResponse(message);
-    return res.status(200).json({ reply: aiResponse });
-  } catch (error) {
-    console.error('Erro ao chamar Wit.ai:', error.message);
-    return res.status(500).json({ reply: 'Ops! Não consegui gerar uma resposta agora. 😔' });
-  }
+  // Envia mensagem para o Wit.ai caso nenhuma resposta programada seja encontrada
+  const witAiResponse = await getWitAiResponse(message);
+  return res.status(200).json({ reply: witAiResponse });
 }
