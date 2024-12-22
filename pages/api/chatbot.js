@@ -168,7 +168,7 @@ function searchCurriculum(query) {
       `Os idiomas falados por Andressa são:
       - Português (nativo)
       - Inglês (intermediário). 🌍`,
-      'Andressa fala português e tem conhecimento básico de inglês. 🇧🇷🇺🇸',
+      'Andressa fala português e tem conhecimento intermediário de inglês. 🇧🇷🇺🇸',
     ],
     education: [
       `A formação acadêmica da Andressa é:
