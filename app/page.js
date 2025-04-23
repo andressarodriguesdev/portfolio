@@ -69,7 +69,7 @@ export default function Home() {
               <a href="#projetos">Projetos</a>
             </li>
             <li>
-              <a href="https://wa.me/5561912345678" className="button" target="blanck"  rel="noopener noreferrer">
+              <a href="https://wa.me/5561981227461" className="button" target="blanck"  rel="noopener noreferrer">
               Contato</a>
             </li>
           </ul>

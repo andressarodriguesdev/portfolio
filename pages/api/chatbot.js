@@ -177,16 +177,15 @@ function searchCurriculum(query) {
       'Andressa está cursando Sistemas da Informação, com previsão de conclusão em 2028. 📚',
     ],
     experience: [
-      `Projetos desenvolvidos por Andressa incluem:
-      - ChamaElas: Sistema de gestão de chamados.
-      - Capivara System: Sistema de catalogação.
-      - Hotel Eclipse: Sistema de reservas. 🏢`,
-      'Ela já desenvolveu projetos como ChamaElas e Hotel Eclipse. Muito legal, né? 😄',
+      `VTREAL Tecnologia – Estagiária de Banco de Dados (3 meses) 
+      - Atuação com atualização e manutenção de bases de dados.
+      - Suporte à integridade e organização dos dados utilizados nos sistemas da empresa.
+      - Experiência prática com rotinas de banco de dados em ambiente profissional.`,
     ],
     contact: [
       `Dados de contato da Andressa:
       - E-mail: andressa.rodrigues.2172@gmail.com
-      - Celular: (61) 98258-5796
+      - Celular: (61) 9 8122-7461
       - Localização: Brasília - DF. 📞`,
       'Você pode falar com a Andressa pelo e-mail ou WhatsApp. 📧📱',
     ],
