@@ -274,7 +274,7 @@ Desculpe, não consegui encontrar uma resposta para sua pergunta. Aqui estão al
 - Habilidades técnicas e comportamentais
 - Formação acadêmica
 - Cursos complementares
-- Contato da Andressa
+- Contato da Andressa,
 
 É só perguntar! 😊
 `;
