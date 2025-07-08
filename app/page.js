@@ -198,7 +198,7 @@ export default function Home() {
             <a href="https://github.com/andressarodrigues2172dev/capivara-management.git" className="bento-item" target="blanck">
               <img src="./imgs/bento-1 (3).png" alt="BGCCI" width="100%" />
             </a>
-            <a href="https://github.com/andressarodrigues2172dev/HotelEclipse.git" className="bento-item">
+            <a href="https://admin-stay-front.vercel.app/" className="bento-item">
               <img src="./imgs/bento-4.png" alt="BGCCI" width="100%" />
             </a>
             <a href="#" className="bento-item">
