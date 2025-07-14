@@ -1,8 +1,10 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
+import ProjectSection from "../components/📄 components/ProjectSection.jsx";
 
 export default function Home() {
+  const [darkMode, setDarkMode] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [messageInput, setMessageInput] = useState('');
   const [messages, setMessages] = useState([
@@ -12,39 +14,39 @@ export default function Home() {
     },
   ]);
 
+  useEffect(() => {
+    if (darkMode) {
+      document.body.classList.add("dark");
+    } else {
+      document.body.classList.remove("dark");
+    }
+  }, [darkMode]);
+
   const submitForm = async (e) => {
     e.preventDefault();
-  
-    // Verifique se a mensagem não está vazia antes de enviar
     if (!messageInput.trim()) {
       console.error('Mensagem vazia. Por favor, insira uma mensagem.');
       return;
     }
-  
+
     const newMessages = [...messages, { role: 'user', content: messageInput }];
     setMessages(newMessages);
-    setMessageInput(''); // Limpa o campo de entrada
-  
+    setMessageInput('');
+
     try {
-      console.log('Enviando mensagem:', messageInput); // Verifique a mensagem que está sendo enviada
-  
       const apiResponse = await fetch('/api/chatbot', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: messageInput }),  // Envia a mensagem para o backend
+        body: JSON.stringify({ message: messageInput }),
       });
-  
+
       const data = await apiResponse.json();
-      console.log('Resposta da API:', data); // Verifique a resposta recebida da API
-  
       setMessages([...newMessages, { role: 'assistant', content: data.reply }]);
     } catch (error) {
       console.error('Erro ao enviar mensagem:', error);
       setMessages([...newMessages, { role: 'assistant', content: 'Desculpe, ocorreu um erro.' }]);
     }
   };
-  
-  
 
   const toggleMobileMenu = () => {
     setMenuOpen(!menuOpen);
@@ -59,31 +61,28 @@ export default function Home() {
         </a>
         <nav>
           <ul id="menu" className={menuOpen ? "active" : ""}>
+            <li><a href="#sobre">Home</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+             <li><a href="#chatbot">Chatbot</a></li>
             <li>
-              <a href="#sobre">Home</a>
-            </li>
-            <li>
-              <a href="#skills">Skills</a>
-            </li>
-            <li>
-              <a href="#projetos">Projetos</a>
-            </li>
-            <li>
-              <a href="https://wa.me/5561981227461" className="button" target="blanck"  rel="noopener noreferrer">
-              Contato</a>
+              <a href="mailto:andressa.rodrigues.2172@gmail.com" className="button" target="blanck" rel="noopener noreferrer">
+                Contato
+              </a>
             </li>
           </ul>
 
-          <a href="#" 
-            className="mobile-toggle"
-            onClick={toggleMobileMenu}>
-            <svg className="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+          <a href="#" className="mobile-toggle" onClick={toggleMobileMenu}>
+            <svg className="w-6 h-6 text-gray-800 dark:text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
               <path stroke="currentColor" strokeLinecap="round" strokeWidth="2" d="M5 7h14M5 12h14M5 17h14"/>
             </svg>
           </a>
+
+          <button onClick={() => setDarkMode(!darkMode)} className="button white" style={{ marginLeft: '1rem' }}>
+            {darkMode ? ' ☀️' : ' 🌙'}
+          </button>
         </nav>
       </header>
-
       <main>
         <section id="sobre" className="hero container">
           <div className="hero-blue">
@@ -99,18 +98,27 @@ export default function Home() {
                 <a href="/Andressa_Rodrigues.pdf" className="button black" target="blanck" >
                     Curriculo
                 </a>
-                <a href="mailto:andressa.rodrigues.2172@gmail.com" className="button white" target="_blank">
+                <a href="https://wa.me/5561981227461" className="button white" target="_blank">
                     Fale comigo
                 </a>
               </div>
               <div className="social-links">
-                <a href="https://github.com/andressarodrigues2172dev" target="blanck">
-                    <img src="./imgs/github.png" alt="Github" width="48" />
+                <a href="https://github.com/andressarodriguesdev" target="blanck">
+                  <img 
+                    src={darkMode ? "./imgs/github-amarelo.png" : "./imgs/github.png"} 
+                    alt="Github" 
+                    width="48" 
+                  />
                 </a>
                 <a href="https://www.linkedin.com/in/andressa-macedo-rodrigues/" target="blanck">
-                    <img src="./imgs/linkedin.png" alt="Linkedin" width="48"/>
+                  <img 
+                    src={darkMode ? "./imgs/linkedin-amarelo.png" : "./imgs/linkedin.png"} 
+                    alt="Linkedin" 
+                    width="48" 
+                  />
                 </a>
               </div>
+
             </div>
           </div>
           <div className="hero-yellow">
@@ -156,62 +164,41 @@ export default function Home() {
               
               <h3>Backend</h3>
               <ul>
-                <li>Java</li>
-                <li>Node.Js</li>
-                <li>SQL</li>
-                <li>MySQL</li>
-                <li>Spring Boot</li>
-                <li>Postman</li>
-                <li>Swagger</li>
-                
-              </ul>
+              <li>Java</li> 
+              <li>Python</li>
+              <li>Spring Framework</li>
+              <li>SQL</li>
+              <li>Thymeleaf</li>
+              <li> Node.js</li>
+              <li> MySQL</li>
+              <li>PostgreSQL</li>
+              <li> JUnit</li> 
+              <li>Git/GitHub</li>
+              <li>Docker</li>
+             </ul>
               <h3>Frontend</h3>
               <ul>
-                <li>HTML</li>
-                <li>CSS</li>
+                <li>React</li>
+                <li>Tailwind CSS</li>
                 <li>JavaScript</li>
-                <li>Vue.JS</li>
+                <li>Vue.js</li>
+                <li>XML (Layouts Android)</li>
+                <li>HTML / CSS</li>
               </ul>             
             </div>
             <div className="right-column">
               <h3>Fã de códigos, café e desafios 🚀</h3>
               <p> 
-                  Desenvolvedora back-end,com foco em Java e Spring Boot. 
-                  Tenho experiência no desenvolvimento de APIs RESTful, integração com bancos de dados como MySQL e PostgreSQL,
-                  e uso de Git para versionamento.
+                  Sou desenvolvedora de software em constante evolução, com vivência prática em projetos full stack e mobile. Já participei de soluções como o AdminStay, ChamaElas, Capivara System e um app Android com interface em XML. Atuei também como estagiária de banco de dados . Tenho experiência com Java, Spring Boot, React, Node.js, Docker e bancos relacionais. Busco desafios onde eu possa crescer, colaborar e criar soluções com impacto.
               </p>
-              <p> Participei de projetos como a ChamaElas e a Eclipse Hotel API, 
-                  onde apliquei minhas habilidades em ambientes reais. 
-                  Estou em busca de oportunidades para expandir meus
-                  conhecimentos e contribuir com soluções inovadoras.
-              </p>
+             
             </div>
           </div>
         </section>
 
-        <section id="projetos" className="bento container">
-          <h2>
-            <small>Prévia</small>
-            Projetos
-          </h2>
-          <div className="bento-grid">
-            <a href="https://github.com/andressarodrigues2172dev/capivara-management.git" className="bento-item" target="blanck">
-              <img src="./imgs/bento-1 (3).png" alt="BGCCI" width="100%" />
-            </a>
-            <a href="https://admin-stay-front.vercel.app/" className="bento-item">
-              <img src="./imgs/bento-4.png" alt="BGCCI" width="100%" />
-            </a>
-            <a href="#" className="bento-item">
-              <img src="./imgs/bento-2.png" alt="BGCCI" width="100%" />
-            </a>
-            <a href="https://github.com/andressarodrigues2172dev/chama-elas.git" className="bento-item">
-              <img src="./imgs/bento-3.png" alt="BGCCI" width="100%" />
-            </a>
-            
-          </div>
-        </section>
+     <ProjectSection />
 
-        <section className="chatbot container">
+        <section id = "chatbot"className="chatbot container">
           <h2>
             <small>Fale comigo</small>
             Chatbot
@@ -221,7 +208,8 @@ export default function Home() {
               <h3>Laura - Chatbot</h3>
               <p>Eu montei um chatbot  aqui que conhece todas as minhas habilidades, experiências  e tem uma cópia do meu CV/Resume. Você pode usá-lo para fazer perguntas sobre mim para ter uma ideia melhor de quem eu sou e o que eu fiz.</p>
               <p>Você também pode baixar meu currículo aqui se quiser dar uma olhada. Atualmente, estou procurando novas oportunidades, então, se você tem um projeto que acha que eu sou uma boa opção, entre em contato!</p>
-              <a href="/Andressa_Rodrigues.pdf" className="button black" target="blanck">Download Curriculo</a>
+              <a href="/Andressa_Rodrigues.pdf" className="button white" target="blanck" >
+                    Baixar curriculum</a>
             </div>
             <div className="chat-box">
               <div className="scroll-area">
